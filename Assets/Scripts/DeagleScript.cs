@@ -7,6 +7,7 @@ public class DeagleScript : MonoBehaviour
     public GameObject bulletPrefab; 
     public Transform shootPoint; 
     public int bulletSpeed;
+    public ParticleSystem shootSmokePrefab;
 
     void Update()
     {
@@ -29,6 +30,7 @@ public class DeagleScript : MonoBehaviour
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             if (rb)
             {
+                shootSmokePrefab.Play();
                 rb.AddForce(direction * bulletSpeed);
             }
         }
