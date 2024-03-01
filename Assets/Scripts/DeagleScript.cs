@@ -7,7 +7,7 @@ public class DeagleScript : MonoBehaviour
     public GameObject bulletPrefab; 
     public Transform shootPoint; 
     public int bulletSpeed;
-    public ParticleSystem shootSmokePrefab;
+    public List<ParticleSystem> shootSmokeList = new List<ParticleSystem>();
 
     void Update()
     {
@@ -30,9 +30,24 @@ public class DeagleScript : MonoBehaviour
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             if (rb)
             {
-                shootSmokePrefab.Play();
+                var playSmoke = PlaySmoke();
+                StartCoroutine(playSmoke);
                 rb.AddForce(direction * bulletSpeed);
             }
         }
     }
+    
+    private IEnumerator PlaySmoke()
+    {
+        int index = 0; 
+
+        while (index < shootSmokeList.Count)
+        {
+            shootSmokeList[index].Play(); 
+            yield return new WaitForSeconds(0.03f); 
+            index++;
+        }
+    }
+
+
 }
