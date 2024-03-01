@@ -70,7 +70,7 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Player hit by enemy");
-            Die();
+            // Die();
         }
     }
 

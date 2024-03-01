@@ -871,7 +871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7192880899286102963, guid: a3d787b62c5ab4c998df68d3d262e05a, type: 3}
   shootPoint: {fileID: 732156055}
-  bulletSpeed: 100000
+  bulletSpeed: 1000000
 --- !u!212 &1084663324
 SpriteRenderer:
   m_ObjectHideFlags: 0
