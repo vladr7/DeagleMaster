@@ -9,6 +9,7 @@ public class DeagleScript : MonoBehaviour
     public Transform shootPoint; 
     public int bulletSpeed;
     public List<ParticleSystem> shootSmokeList = new List<ParticleSystem>();
+    public List<Transform> shootSmokePositionList = new List<Transform>();
     public GameObject smokeUnderFeetPosition;
     public VisualEffect smokeUnderFeet;
 
@@ -33,24 +34,27 @@ public class DeagleScript : MonoBehaviour
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             if (rb)
             {
-                smokeUnderFeet.transform.position = smokeUnderFeetPosition.transform.position;
-                smokeUnderFeet.Play();
-                smokeUnderFeet.transform.parent = null;
-                var playSmoke = PlaySmoke();
-                StartCoroutine(playSmoke);
+                PlaySmokeUnderFeetVFX();
+                PlayShootSmokeVFX();
                 rb.AddForce(direction * bulletSpeed);
             }
         }
     }
-    
-    private IEnumerator PlaySmoke()
+
+    private void PlaySmokeUnderFeetVFX()
+    {
+        smokeUnderFeet.transform.position = smokeUnderFeetPosition.transform.position;
+        smokeUnderFeet.Play();
+        smokeUnderFeet.transform.parent = null;
+    }
+
+    private void PlayShootSmokeVFX()
     {
         int index = 0; 
 
         while (index < shootSmokeList.Count)
         {
             shootSmokeList[index].Play(); 
-            yield return new WaitForSeconds(0.03f); 
             index++;
         }
     }
