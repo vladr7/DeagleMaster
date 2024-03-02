@@ -5995,12 +5995,9 @@ MonoBehaviour:
   - {fileID: 736413093}
   - {fileID: 1823900235}
   - {fileID: 1925240417}
-  shootSmokePositionList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   smokeUnderFeetPosition: {fileID: 1801188754}
   smokeUnderFeet: {fileID: 175572828}
+  shootSoundClip: {fileID: 8300000, guid: 382c061e37ed44c8ba94cb99bd3d7a65, type: 3}
 --- !u!212 &1084663324
 SpriteRenderer:
   m_ObjectHideFlags: 0
