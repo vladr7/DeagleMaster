@@ -9,7 +9,6 @@ public class DeagleScript : MonoBehaviour
     public Transform shootPoint; 
     public int bulletSpeed;
     public List<ParticleSystem> shootSmokeList = new List<ParticleSystem>();
-    public List<Transform> shootSmokePositionList = new List<Transform>();
     public GameObject smokeUnderFeetPosition;
     public VisualEffect smokeUnderFeet;
 

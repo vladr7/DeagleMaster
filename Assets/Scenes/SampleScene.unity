@@ -6161,7 +6161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9149293992925509363, guid: c8cac5f8efcc8a343920258ddc6efdee, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9149293992925509363, guid: c8cac5f8efcc8a343920258ddc6efdee, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.y
