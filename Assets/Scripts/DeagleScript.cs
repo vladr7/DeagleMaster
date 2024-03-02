@@ -11,7 +11,7 @@ public class DeagleScript : MonoBehaviour
     public List<ParticleSystem> shootSmokeList = new List<ParticleSystem>();
     public GameObject smokeUnderFeetPosition;
     public VisualEffect smokeUnderFeet;
-    public AudioClip shootSoundClip; // Change to AudioClip
+    public AudioClip shootSoundClip; 
 
     void Update()
     {
@@ -48,11 +48,17 @@ public class DeagleScript : MonoBehaviour
         GameObject tempAudioSource = new GameObject("TempAudio");
         AudioSource audioSource = tempAudioSource.AddComponent<AudioSource>();
         audioSource.clip = shootSoundClip;
+
+        // Increase the pitch by 15%
+        var randomPitch = Random.Range(1.1f, 1.3f);
+        audioSource.pitch = randomPitch;
+
         audioSource.Play();
 
         // Destroy the temporary GameObject after the clip finishes playing
-        Destroy(tempAudioSource, shootSoundClip.length);
+        Destroy(tempAudioSource, shootSoundClip.length / audioSource.pitch); // Adjust the destroy time based on the new pitch
     }
+
 
     private void PlaySmokeUnderFeetVFX()
     {
