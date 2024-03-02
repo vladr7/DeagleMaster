@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class DeagleScript : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class DeagleScript : MonoBehaviour
     public Transform shootPoint; 
     public int bulletSpeed;
     public List<ParticleSystem> shootSmokeList = new List<ParticleSystem>();
+    public VisualEffect smokeUnderFeet;
 
     void Update()
     {
@@ -30,6 +32,7 @@ public class DeagleScript : MonoBehaviour
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             if (rb)
             {
+                smokeUnderFeet.Play();
                 var playSmoke = PlaySmoke();
                 StartCoroutine(playSmoke);
                 rb.AddForce(direction * bulletSpeed);

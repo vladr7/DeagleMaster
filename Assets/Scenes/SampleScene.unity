@@ -123,6 +123,93 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &175572826 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+  m_PrefabInstance: {fileID: 206335286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!2083052967 &175572828 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 1088782405393040830, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+  m_PrefabInstance: {fileID: 206335286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &206335286
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 929428935}
+    m_Modifications:
+    - target: {fileID: 1088782405393040830, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088782405393040830, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.3333328
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.3333328
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.3333328
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052887298989561047, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4968336861700998245, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
+      propertyPath: m_Name
+      value: vfxgraph_StylizedSmoke_Impact_v1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 762b94612fd2f2d4f97a21bb6ba9699d, type: 3}
 --- !u!1 &230231266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5708,6 +5795,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 175572826}
   - {fileID: 1084663322}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5765,6 +5853,7 @@ MonoBehaviour:
   - {fileID: 736413093}
   - {fileID: 1823900235}
   - {fileID: 1925240417}
+  smokeUnderFeet: {fileID: 175572828}
 --- !u!212 &1084663324
 SpriteRenderer:
   m_ObjectHideFlags: 0
