@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    public float speed = 5f; 
-    public GameObject deathSplatter;
+    public float speed = 5f;
+    public ParticleSystem enemyDeathVFX;
+    public Transform enemyDeathVFXPosition;
     
     private ScoreManagerScript scoreManager;
     private TextManagerScript textManager;
@@ -17,6 +18,8 @@ public class EnemyScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         scoreManager = GameObject.FindWithTag("ScoreManager").GetComponent<ScoreManagerScript>();
         textManager = GameObject.FindWithTag("TextManager").GetComponent<TextManagerScript>();
+        enemyDeathVFX = GameObject.FindWithTag("EnemyDeathVFX").GetComponent<ParticleSystem>();
+        enemyDeathVFX.transform.position = enemyDeathVFXPosition.position;
     }
 
     private void Update()
@@ -41,10 +44,8 @@ public class EnemyScript : MonoBehaviour
             Debug.Log("Enemy hit by bullet");
             scoreManager.AddEnemyKilled();
             textManager.UpdateEnemiesKilled(scoreManager.GetEnemiesKilled());
+            enemyDeathVFX.Play();
 
-            GameObject splatterInstance = Instantiate(deathSplatter, transform.position, Quaternion.identity);
-        
-            Destroy(splatterInstance, 1f);
             Destroy(other.gameObject, 0.03f);
             Destroy(gameObject);
         }
