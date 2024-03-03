@@ -53,7 +53,7 @@ public class DeagleScript : MonoBehaviour
         var randomPitch = Random.Range(1.1f, 1.3f);
         audioSource.pitch = randomPitch;
 
-        audioSource.Play();
+        // audioSource.Play();
 
         // Destroy the temporary GameObject after the clip finishes playing
         Destroy(tempAudioSource, shootSoundClip.length / audioSource.pitch); // Adjust the destroy time based on the new pitch

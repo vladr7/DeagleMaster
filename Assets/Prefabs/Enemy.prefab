@@ -165,6 +165,7 @@ MonoBehaviour:
   speed: 2
   enemyDeathVFX: {fileID: 0}
   enemyDeathVFXPosition: {fileID: 5713615809867493737}
+  enemyDeathSound: {fileID: 0}
 --- !u!1 &5639950494086412673
 GameObject:
   m_ObjectHideFlags: 0

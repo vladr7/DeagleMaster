@@ -9,6 +9,7 @@ TagManager:
   - ScoreManager
   - TextManager
   - EnemyDeathVFX
+  - EnemyDeathSFX
   layers:
   - Default
   - TransparentFX

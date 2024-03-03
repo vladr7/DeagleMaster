@@ -7,6 +7,7 @@ public class EnemyScript : MonoBehaviour
     public float speed = 5f;
     public ParticleSystem enemyDeathVFX;
     public Transform enemyDeathVFXPosition;
+    public AudioSource enemyDeathSound;
     
     private ScoreManagerScript scoreManager;
     private TextManagerScript textManager;
@@ -20,6 +21,7 @@ public class EnemyScript : MonoBehaviour
         textManager = GameObject.FindWithTag("TextManager").GetComponent<TextManagerScript>();
         enemyDeathVFX = GameObject.FindWithTag("EnemyDeathVFX").GetComponent<ParticleSystem>();
         enemyDeathVFX.transform.position = enemyDeathVFXPosition.position;
+        enemyDeathSound = GameObject.FindWithTag("EnemyDeathSFX").GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -45,6 +47,7 @@ public class EnemyScript : MonoBehaviour
             scoreManager.AddEnemyKilled();
             textManager.UpdateEnemiesKilled(scoreManager.GetEnemiesKilled());
             enemyDeathVFX.Play();
+            enemyDeathSound.Play();
 
             Destroy(other.gameObject, 0.03f);
             Destroy(gameObject);
